@@ -1,0 +1,141 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="General">
+    <div class="Users">
+        Заявки
+    </div>
+    <div class="divMenu">
+        <!-- <div class="imgButtonLeft">
+            <a href="/register/index"><img src="Plus.png"></a>
+        </div> -->
+        <div class="imgButton">
+            <!-- <button class="edit"><img src="change.png"></button> -->
+            <a href="#popup" class="popup_link"><img src="change.png"></a>
+        </div>
+        <div class="imgButton">
+            <button class="delete"><img src="del.png"></button>
+
+        </div>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Фамилия">
+    </div>
+    <div class="divTable">
+        <table id="myTable">
+            <tr class="header">
+                <th>
+                    Имя
+                </th>
+                <th>
+                    Фамилия
+                </th>
+                <th>
+                    Должность
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Номер заявки
+                </th>
+                <th>
+                    Дата регистрации
+                </th>
+
+            </tr>
+
+        </table>
+    </div>
+    <div class="divInput">
+        <div>
+            <p>Форма добавления заявки</p>
+        </div>
+        <form action="#" method="#" id="form" style="display: flex; justify-content: space-between;">
+            <div>
+                <label style="">
+                    Имя:
+                    <input type="text" name="name" value="Имя" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Фамилия:
+                    <input type="text" name="sername" value="Фамилия" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Должность:
+                    <input type="text" name="post" value="Должность" required>
+                </label>
+            </div>
+            <div>
+                <label>
+                    Email:
+                    <input type="text" name="email" value="email@mail.ru" required pattern="[A-Za-z0-9._%+-]+@@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
+                </label>
+            </div>
+            <!-- <div>
+              <label>
+                Номер заявки:
+                <input type="text" name="number" value="">
+              </label>
+            </div> -->
+            <div>
+                <button class="formRequest" type="submit">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="popup" class="popup">
+    <div class="popup_body">
+        <div class="popup_content">
+            <a href="#" class="popup_close">х</a>
+            <div class="popup_title">Это окно для изменения заявки</div>
+            <div class="popup_text">
+                <form action="#" method="#" id="popup_form" style="display: flex; justify-content: space-between;">
+                    <div>
+                        <label style="">
+                            Имя:
+                            <input id="popupName" type="text" name="name" value="" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Фамилия:
+                            <input id="popupSerName" type="text" name="sername" value="" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Должность:
+                            <input id="popupPost" type="text" name="post" value="" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Email:
+                            <input id="popupEmail" type="text" name="email" value="" required pattern="[A-Za-z0-9._%+-]+@@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}">
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            Номер заявки:
+                            <input id="popupNumber" type="text" name="number" value="" readonly>
+                        </label>
+                    </div>
+                    <div>
+                        <button class="formRequest" type="submit">Отправить</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="js\main.js"></script>
+<script src="js\jquery-3.6.0.min.js"></script>
+<script src="js\script.js"></script>
